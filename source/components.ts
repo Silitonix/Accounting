@@ -7,12 +7,14 @@ export class Extention
   static async init()
   {
     const list = await database.get("components");
-    if (!list || list.length == 0) {
-      System.error("Extention", "I can't find extentions !", 0);
-    }
+    if (!list) System.error("افزونه", "I can't find extentions !", 0);
 
-    list.forEach(item => {
-      new Tab(item);
-    });
+    list.forEach(async item => await this.load(item));
+  }
+  static async load(name:string)
+  {
+    const ext = await database.get(`components/${ name }`);
+    if (!ext) System.error("افزونه", `افزونه "${name}" یافت نشد`, 0);
+    new Tab(name);
   }
 }
