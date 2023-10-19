@@ -13,7 +13,7 @@ export class Extention
   }
   static async load(name:string)
   {
-    const ext = await database.get(`components/${ name }`);
+    const ext = await database.get(`components/${ name }/config`);
     if (!ext) System.error("افزونه", `افزونه "${name}" یافت نشد`, 0);
     new Tab(name);
   }

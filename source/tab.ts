@@ -18,6 +18,6 @@ export class Tab
   {
     this.DOM = UI.element("div", "tab", System.tabDOM);
     this.DOM.textContent = name;
-    this.DOM.addEventListener("click",this.active);
+    this.DOM.addEventListener("click",this.active.bind(this));
   }
 }

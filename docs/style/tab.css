@@ -1,12 +1,17 @@
 .tab-list {
   display: flex;
   flex-flow: column;
-  padding:1rem;
-  gap:1rem;
+  padding: 1rem;
+  gap: 1rem;
   align-items: center;
+  width: 300px;
 }
 
-.tab{
+.tab:last-child {
+  margin-top: auto;
+}
+
+.tab {
   position: relative;
   padding: 1rem;
   width: 100%;
@@ -17,22 +22,22 @@
   background: #f6f6f6;
 }
 
-.tab::before{
+.tab::before {
   content: '';
   position: absolute;
-  left: 4px;
-  top: 0;
   width: 4px;
   height: 50%;
-  transform: translateY(50%);
+  transform: translateX(200%);
   border-radius: 12px;
   background: #0001;
   transition: 0.5s;
   text-shadow: 2px 2px 2px #00000050;
 }
-.tab:hover::before{
+
+.tab:hover::before {
   background: #0005;
 }
-.tab[status="active"]::before{
+
+.tab[status="active"]::before {
   background: #0055ff;
 }

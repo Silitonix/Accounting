@@ -18,6 +18,6 @@ export class System
   static {
     this.tabDOM = UI.element("div", "tab-list");
     this.tabDOMTitle = UI.element("h1", "tab-title", this.tabDOM);
-    this.tabDOMTitle.textContent = "Accounting";
+    this.tabDOMTitle.textContent = "حسابدار";
   }
 }
