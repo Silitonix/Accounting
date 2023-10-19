@@ -1,0 +1,16 @@
+@import url(shadow.css);
+@import url(error.css);
+@import url(tab.css);
+*{
+  -moz-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+body{
+  border-radius: .5rem;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  font-family: system-ui;
+  background: #f0f0f0;
+}
